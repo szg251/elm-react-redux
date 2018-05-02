@@ -62,9 +62,23 @@ const converter = (oldkey, newkey) => object => (
   }), {})
 )
 
+const autoconvert = state => {
+  if (Array.isArray(state)) {
+    return state.map(autoconvert)
+  }
+  return Object.entries(state).reduce((obj, [key, val]) => ({
+    ...obj,
+    [key
+      .replace(/^[_]*/, '')
+      .replace(/^$/, 'n')
+      .replace(/^[A-Z]/, l => l.toLowerCase())
+    ] : (typeof val === 'object' ? autoconvert(val) : val)
+  }), {})
+}
+
 const ElmWithRedux = connect((state, store) => ({
   state,
   store
 }))(Elm)
 
-export { Elm, ElmWithRedux, converter }
+export { Elm, ElmWithRedux, converter, autoconvert }
