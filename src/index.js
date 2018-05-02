@@ -55,7 +55,7 @@ class Elm extends Component {
   }
 }
 
-const converter = oldkey => newkey => object => (
+const converter = (oldkey, newkey) => object => (
   Object.entries(object).reduce((obj, [key, val]) => ({
     ...obj,
       [key.replace(oldkey, newkey)] : val

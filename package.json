@@ -9,12 +9,21 @@
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "scripts": {
+    "test": "jest",
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build"
   },
+  "jest": {
+  "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
   "dependencies": {
-    "class-autobind": "^0.1.4"
+    "class-autobind": "^0.1.4",
+    "react": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
@@ -23,6 +32,8 @@
     "redux": "^4.0.0"
   },
   "devDependencies": {
+    "jest": "^22.4.3",
+    "babel-jest": "^22.4.3",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-plugin-external-helpers": "^6.22.0",
