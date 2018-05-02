@@ -16,7 +16,6 @@ class Demo extends React.Component {
         <hr />
         <ElmWithRedux
           src={ Main }
-          state={ this.props.state }
           actions={ action }
         />
       </div>
