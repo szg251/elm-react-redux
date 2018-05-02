@@ -1,6 +1,6 @@
 import React from 'react'
-import { Main } from '../elm/Main.elm'
 import { Elm } from 'elm-react'
+import { Main } from '../elm/Main.elm'
 
 class Demo extends React.Component {
   render() {

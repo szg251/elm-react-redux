@@ -1,8 +1,8 @@
 import React from 'react'
+import { ElmWithRedux } from 'elm-react'
 import { Main } from '../elm/Main.elm'
 import { connect } from 'react-redux'
 import * as action from './action.js'
-import { ElmWithRedux } from 'elm-react'
 
 class Demo extends React.Component {
   render() {
