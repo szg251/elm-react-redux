@@ -1,11 +1,11 @@
-# elm-react
+# elm-react-redux
 
 Elm wrapper for a React-Redux application.  
 With this wrapper component you can simply embed Elm apps into React-Redux, dispatch actions and receive new props from React.
 
 ### Usage
 1. Install with the package manager of your choice:  
-`npm install --save elm-react` or `yarn add elm-react`
+`npm install --save elm-react-redux` or `yarn add elm-react-redux`
 
 2. Set up webpack to compile Elm for you:
 ```js
@@ -18,7 +18,7 @@ With this wrapper component you can simply embed Elm apps into React-Redux, disp
 3. Create an Elm app somewhere inside your React project folder (src/elm is recommended)
 4. Import this wrapper and your Elm app:   
 ```js
-import { Elm } from 'elm-react'
+import { Elm } from 'elm-react-redux'
 import { Main } from '../elm/Main.elm'
 ```
 5. Use this component anywhere in your application
@@ -41,10 +41,10 @@ port dispatch : { actions : List String, payload : List Value } -> Cmd msg
 
 port jsAction : { object : String, method : String, payload : List Value } -> Cmd msg
 ```
-I would recommend separating ports and redux data types to modules, like I did in the [examples](https://github.com/gege251/elm-react/tree/master/examples/react-redux-example/src/elm).
+I would recommend separating ports and redux data types to modules, like I did in the [examples](https://github.com/gege251/elm-react-redux/tree/master/examples/react-redux-example/src/elm).
 3. Import ElmWithRedux this wrapper and your Elm app
 ```js
-import { ElmWithRedux } from 'elm-react'
+import { ElmWithRedux } from 'elm-react-redux'
 import { Main } from '../elm/Main.elm'
 ```
 4. The ElmWithRedux component accepts a new *actions* attribute. This will enable our Elm app to use Redux action creators.  
@@ -70,7 +70,7 @@ Sometimes you will find yourself in a situation (like I did) when your Redux sta
 ```
 Capitalized first letters are not allowed in Elm as record keys, so this will cause an error. The solution for this is to write a stateConverter.
 ```js
-import { converter } from 'elm-react'
+import { converter } from 'elm-react-redux'
 
 const warpReducer = converter(/^W/, 'w')
 const convertState = state => ({

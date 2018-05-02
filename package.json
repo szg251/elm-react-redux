@@ -1,10 +1,10 @@
 {
-  "name": "elm-react",
+  "name": "elm-react-redux",
   "version": "1.0.0",
   "description": "Elm wrapper for React-Redux",
   "author": "gege251",
   "license": "MIT",
-  "repository": "gege251/elm-react",
+  "repository": "gege251/elm-react-redux",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

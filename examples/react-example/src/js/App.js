@@ -1,5 +1,5 @@
 import React from 'react'
-import { Elm } from 'elm-react'
+import { Elm } from 'elm-react-redux'
 import { Main } from '../elm/Main.elm'
 
 class Demo extends React.Component {
