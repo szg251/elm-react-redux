@@ -35,7 +35,12 @@ view model =
                 model.name
     in
         div []
-            [ input [ placeholder "Insert your name here", onInput InputName, value model.name ] []
+            [ input
+                [ placeholder "Insert your name here"
+                , onInput InputName
+                , value model.name
+                ]
+                []
             , h1 [] [ text ("Hello " ++ displayName ++ "!") ]
             ]
 
