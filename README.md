@@ -1,5 +1,7 @@
 # elm-react-redux
 
+[![Known Vulnerabilities](https://snyk.io/test/github/gege251/elm-react-redux/badge.svg)](https://snyk.io/test/github/gege251/elm-react-redux)
+
 Elm wrapper for a React-Redux application.  
 With this wrapper component you can simply embed Elm apps into React-Redux, dispatch actions and receive new props from React.
 
