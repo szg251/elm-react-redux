@@ -12,10 +12,11 @@
     "test": "jest",
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "prepare": "yarn run build"
+    "prepare": "yarn run snyk-protect && yarn run build",
+    "snyk-protect": "snyk protect"
   },
   "jest": {
-  "transform": {
+    "transform": {
       "^.+\\.js$": "babel-jest"
     }
   },
@@ -23,7 +24,8 @@
     "class-autobind": "^0.1.4",
     "react": "^16.3.2",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "snyk": "^1.316.1"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
@@ -60,5 +62,6 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "snyk": true
 }
